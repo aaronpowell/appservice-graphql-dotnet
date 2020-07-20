@@ -4,9 +4,9 @@ using GraphQL.Types;
 
 namespace appservice_graphql_dotnet.Types
 {
-    public class QuizQuery : ObjectGraphType
+    public class TriviaQuery : ObjectGraphType
     {
-        public QuizQuery(QuizData data)
+        public TriviaQuery(QuizData data)
         {
             Field<NonNullGraphType<ListGraphType<NonNullGraphType<QuizType>>>>("quizzes", resolve: context =>
             {

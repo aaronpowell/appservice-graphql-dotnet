@@ -20,7 +20,7 @@ namespace appservice_graphql_dotnet
         {
             services.AddTransient<HttpClient>();
             services.AddSingleton<QuizData>();
-            services.AddSingleton<QuizQuery>();
+            services.AddSingleton<TriviaQuery>();
             services.AddSingleton<ISchema, TriviaSchema>();
 
             services.AddGraphQL(options =>

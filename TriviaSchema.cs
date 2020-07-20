@@ -5,7 +5,7 @@ namespace appservice_graphql_dotnet
 {
     public class TriviaSchema : Schema
     {
-        public TriviaSchema(QuizQuery query)
+        public TriviaSchema(TriviaQuery query)
         {
             Query = query;
         }
