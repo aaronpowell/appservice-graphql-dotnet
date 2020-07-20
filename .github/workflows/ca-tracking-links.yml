@@ -1,0 +1,21 @@
+on: [push]
+
+jobs:
+  link_checker_job:
+    runs-on: ubuntu-latest
+    name: Checking my links
+    steps:
+      - name: Run CA Link Checker
+        id: checker
+        uses: spboyer/ca-readme-tracking-links-action@v1
+        with:
+          alias: "aapowell"
+          event: "graphqlonazure"
+          channel: "github"
+
+      - name: Commit results
+        run: |
+          git config --global user.name "Aaron Powell"
+          git config --global user.email "me@aaron-powell.com"
+          git commit README -m 'Re-build README' || echo "No changes to commit"
+          git push origin || echo "No changes to commit"
