@@ -1,3 +1,5 @@
+name: Ensure CA tracking links
+
 on: [push]
 
 jobs:
